@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "Design system for Avail",
   "scripts": {
-    "boot": "yarn add --dev lerna && lerna bootstrap",
     "build:packages": "lerna run build --stream --ignore @doors/docs",
     "build:storybook": "build-storybook",
     "build:docs": "yarn run -w @doors/docs build",
