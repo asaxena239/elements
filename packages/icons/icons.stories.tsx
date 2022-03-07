@@ -1,9 +1,9 @@
 import { Box, Container, Grid, Col } from "@doors/core"
 import * as icons from "./src"
 
-export default { title: "Packages/Icons" }
+export default { title: "Packages/Icons/All Icons" }
 
-export function IconsExample() {
+export function IconsStory() {
   return (
     <Container sx={{ mt: "4rem" }}>
       <Grid sx={{ justifyContent: "center" }}>
@@ -27,3 +27,5 @@ export function IconsExample() {
     </Container>
   )
 }
+
+IconsStory.storyName = "All Icons"

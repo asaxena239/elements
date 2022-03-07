@@ -9,7 +9,7 @@ import { Chip } from "@doors/display"
 import { ToastProvider, useToast } from "@doors/feedback"
 
 export default {
-  title: "Patterns/Organisms/Transactions",
+  title: "Patterns/Transactions Table",
   decorators: [
     (Story) => {
       return (
@@ -130,7 +130,7 @@ function TableRow({ date, type, amount, category, property }) {
   )
 }
 
-export function Transactions() {
+export function TransactionsTable() {
   const { loading, error, data, refetch } = useAsyncData({
     lazy: true,
     url: "/transactions",
@@ -177,7 +177,7 @@ export function Transactions() {
   )
 }
 
-Transactions.parameters = {
+TransactionsTable.parameters = {
   msw: {
     handlers: [
       rest.get("/transactions", (req, res, ctx) => {

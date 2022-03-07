@@ -3,14 +3,7 @@ import { createPortal } from "react-dom"
 import { Box } from "@doors/core"
 import { useResize, usePortal, useRovingIndex, useAsyncData } from "./src"
 
-export default { title: "Packages/Hooks", description: "Hello World" }
-
-export function UseResizeExample() {
-  const targetRef = useRef()
-  const bounds = useResize(targetRef)
-  console.log("bounds: ", bounds)
-  return <Box ref={targetRef}>Hello World</Box>
-}
+export default { title: "Packages/Hooks" }
 
 export function UsePortalExample() {
   const portalTarget = usePortal()
