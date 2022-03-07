@@ -1,8 +1,8 @@
-import { Avatar, AvatarGroup } from "./src"
-import { AvatarsProvider } from "./src/avatars-provider"
+import { Avatar, AvatarGroup } from "../src/avatar"
+// import { AvatarsProvider } from "./src/avatars-provider"
 
 export default {
-  title: "Packages/Avatars",
+  title: "Packages/Display/Avatars",
 }
 
 const defaultPhoto =
