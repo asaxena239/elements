@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Design system for Avail",
   "scripts": {
-    "build:packages": "lerna run build --stream --ignore @doors/docs",
+    "build:packages": "yarn workspaces foreach -p -i -v -j unlimited --exclude @doors/docs run build",
     "build:storybook": "build-storybook",
     "build:docs": "yarn run -w @doors/docs build",
     "clean": "yarn workspaces foreach run rm -rf node_modules && rm -rf node_modules",
@@ -53,7 +53,6 @@
     "chromatic": "^6.5.1",
     "concurrently": "^7.0.0",
     "jest": "^27.5.1",
-    "lerna": "^4.0.0",
     "microbundle": "^0.14.2",
     "msw": "^0.38.2",
     "msw-storybook-addon": "^1.6.1",
