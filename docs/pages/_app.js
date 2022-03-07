@@ -1,17 +1,19 @@
-import React from "react"
-import { DefaultSeo } from "next-seo"
-import { ElementsProvider } from "@rent_avail/core"
-import { MDXProvider } from "@mdx-js/react"
-import components from "components/mdx-components"
-import defaultSeo from "../seo.config"
+import { createGlobalStyle } from "styled-components"
+import { DoorsProvider } from "@doors/core"
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+`
 
 export default function App({ Component, pageProps }) {
   return (
-    <ElementsProvider>
-      <MDXProvider components={components}>
-        <DefaultSeo {...defaultSeo} />
-        <Component {...pageProps} />
-      </MDXProvider>
-    </ElementsProvider>
+    <DoorsProvider>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </DoorsProvider>
   )
 }

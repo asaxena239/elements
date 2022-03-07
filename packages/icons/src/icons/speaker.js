@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const Speaker = forwardRef(function Speaker(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <g clip-path="url(#clip0)">
@@ -14,13 +14,13 @@ export const Speaker = forwardRef(function Speaker(props, ref) {
         </clippath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
 Speaker.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 Speaker.defaultProps = {
   viewBox: "0 0 24 24",
@@ -28,6 +28,6 @@ Speaker.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-Speaker.displayName = "Speaker"
+Speaker.displayName = "Speaker";

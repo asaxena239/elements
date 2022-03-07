@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const DownloadCloud = forwardRef(function DownloadCloud(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <g clip-path="url(#clip0)">
@@ -15,13 +15,13 @@ export const DownloadCloud = forwardRef(function DownloadCloud(props, ref) {
         </clippath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
 DownloadCloud.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 DownloadCloud.defaultProps = {
   viewBox: "0 0 24 24",
@@ -29,6 +29,6 @@ DownloadCloud.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-DownloadCloud.displayName = "DownloadCloud"
+DownloadCloud.displayName = "DownloadCloud";

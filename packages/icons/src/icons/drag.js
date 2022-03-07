@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const Drag = forwardRef(function Drag(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <path d="M10 4C10 5.10457 9.10457 6 8 6C6.89543 6 6 5.10457 6 4C6 2.89543 6.89543 2 8 2C9.10457 2 10 2.89543 10 4Z"></path>
@@ -11,13 +11,13 @@ export const Drag = forwardRef(function Drag(props, ref) {
       <path d="M18 12C18 13.1046 17.1046 14 16 14C14.8954 14 14 13.1046 14 12C14 10.8954 14.8954 10 16 10C17.1046 10 18 10.8954 18 12Z"></path>
       <path d="M18 20C18 21.1046 17.1046 22 16 22C14.8954 22 14 21.1046 14 20C14 18.8954 14.8954 18 16 18C17.1046 18 18 18.8954 18 20Z"></path>
     </svg>
-  )
-})
+  );
+});
 
 Drag.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 Drag.defaultProps = {
   viewBox: "0 0 24 24",
@@ -25,6 +25,6 @@ Drag.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-Drag.displayName = "Drag"
+Drag.displayName = "Drag";

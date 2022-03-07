@@ -1,18 +1,21 @@
 {
-  "name": "@rent_avail/feedback",
-  "version": "0.2.17",
-  "description": "Feedback components.",
-  "source": "src/index.js",
-  "main": "dist/index.js",
+  "license": "MIT",
+  "name": "@doors/feedback",
+  "version": "0.0.7",
+  "description": "Feedback components for the doors design system",
+  "source": "src/index.ts",
+  "main": "./dist/index.js",
   "module": "dist/index.esm.js",
-  "esmodule": "dist/index.modern.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
   "files": [
     "dist"
   ],
   "scripts": {
+    "mb": "microbundle --jsx 'React.createElement' --jsxImportSource react --globals react/jsx-runtime=jsx",
     "test": "echo 'run tests from the root directory'",
-    "build": "microbundle --jsx React.createElement",
-    "watch": "microbundle watch --no-compress --jsx React.createElement",
+    "build": "yarn mb",
+    "watch": "yarn mb watch --no-compress",
     "prepack": "yarn build"
   },
   "publishConfig": {
@@ -21,19 +24,23 @@
   "contributors": [
     "Patrick Krawczykowski <patrick@dreadful.design>"
   ],
-  "license": "MIT",
   "peerDependencies": {
-    "react": "^16.13.1 || ^17.0.0",
-    "react-dom": "^16.13.1 || ^17.0.0",
-    "react-is": "^16.13.1 || ^17.0.0",
-    "styled-components": "^5.1.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "styled-components": "^5.3.0",
+    "styled-system": "^5.1.5"
   },
   "dependencies": {
-    "@rent_avail/base": "^0.5.0",
-    "@rent_avail/typography": "^0.1.21",
-    "@rent_avail/utils": "^0.5.1",
-    "framer-motion": "^4.1.17",
-    "react-feather": "^2.0.9",
-    "styled-system": "^5.1.5"
+    "@doors/core": "workspace:^",
+    "@doors/hooks": "workspace:^",
+    "@doors/icons": "workspace:^",
+    "@doors/utils": "workspace:^",
+    "clsx": "^1.1.1",
+    "framer-motion": "4.1.17"
+  },
+  "gitHead": "8671374da157da4b5f714f49ac1f2d40a74aa438",
+  "devDependencies": {
+    "microbundle": "^0.14.2"
   }
 }

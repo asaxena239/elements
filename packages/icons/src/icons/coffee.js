@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const Coffee = forwardRef(function Coffee(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <path d="M18 8H19C20.0609 8 21.0783 8.42143 21.8284 9.17157C22.5786 9.92172 23 10.9391 23 12C23 13.0609 22.5786 14.0783 21.8284 14.8284C21.0783 15.5786 20.0609 16 19 16H18"></path>
@@ -10,13 +10,13 @@ export const Coffee = forwardRef(function Coffee(props, ref) {
       <path d="M10 1V4"></path>
       <path d="M14 1V4"></path>
     </svg>
-  )
-})
+  );
+});
 
 Coffee.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 Coffee.defaultProps = {
   viewBox: "0 0 24 24",
@@ -24,6 +24,6 @@ Coffee.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-Coffee.displayName = "Coffee"
+Coffee.displayName = "Coffee";

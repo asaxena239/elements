@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const Loudspeaker = forwardRef(function Loudspeaker(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <path d="M2 20L10 5L14 10L18 15L2 20Z"></path>
@@ -10,13 +10,13 @@ export const Loudspeaker = forwardRef(function Loudspeaker(props, ref) {
       <path d="M14 4L14.5 2"></path>
       <path d="M20 11H22"></path>
     </svg>
-  )
-})
+  );
+});
 
 Loudspeaker.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 Loudspeaker.defaultProps = {
   viewBox: "0 0 24 24",
@@ -24,6 +24,6 @@ Loudspeaker.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-Loudspeaker.displayName = "Loudspeaker"
+Loudspeaker.displayName = "Loudspeaker";

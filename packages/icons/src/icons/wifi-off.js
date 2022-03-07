@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const WifiOff = forwardRef(function WifiOff(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <g clip-path="url(#clip0)">
@@ -19,13 +19,13 @@ export const WifiOff = forwardRef(function WifiOff(props, ref) {
         </clippath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
 WifiOff.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 WifiOff.defaultProps = {
   viewBox: "0 0 24 24",
@@ -33,6 +33,6 @@ WifiOff.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-WifiOff.displayName = "WifiOff"
+WifiOff.displayName = "WifiOff";

@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const Tag = forwardRef(function Tag(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <g clip-path="url(#clip0)">
@@ -13,13 +13,13 @@ export const Tag = forwardRef(function Tag(props, ref) {
         </clippath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
 Tag.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 Tag.defaultProps = {
   viewBox: "0 0 24 24",
@@ -27,6 +27,6 @@ Tag.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-Tag.displayName = "Tag"
+Tag.displayName = "Tag";

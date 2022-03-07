@@ -3,17 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.0.2](https://github.com/rentalutions/elements/compare/@rent_avail/core@0.0.1...@rent_avail/core@0.0.2) (2021-05-18)
+## [0.1.4](/compare/@doors/core@0.1.3...@doors/core@0.1.4) (2022-02-08)
+
+**Note:** Version bump only for package @doors/core
+
+
+
+
+
+## [0.1.3](/compare/@doors/core@0.1.2...@doors/core@0.1.3) (2022-02-05)
+
+**Note:** Version bump only for package @doors/core
+
+
+
+
+
+## [0.1.2](/compare/@doors/core@0.1.1...@doors/core@0.1.2) (2022-01-14)
+
+**Note:** Version bump only for package @doors/core
+
+
+
+
+
+## [0.1.1](/compare/@doors/core@0.1.0...@doors/core@0.1.1) (2022-01-11)
+
+**Note:** Version bump only for package @doors/core
+
+
+
+
+
+# 0.1.0 (2022-01-11)
 
 
 ### Bug Fixes
 
-* update container padding ([016ea81](https://github.com/rentalutions/elements/commit/016ea811c0f88e54c556752281d4ee156f4ddef5))
+* change module file to mjs 5c79055
 
 
+### Features
 
-
-
-## 0.0.1 (2021-03-19)
-
-**Note:** Version bump only for package @rent_avail/core
+* update color token usage for controls 46bd602

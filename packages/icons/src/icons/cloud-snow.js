@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const CloudSnow = forwardRef(function CloudSnow(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <g clip-path="url(#clip0)">
@@ -13,13 +13,13 @@ export const CloudSnow = forwardRef(function CloudSnow(props, ref) {
         </clippath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
 CloudSnow.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 CloudSnow.defaultProps = {
   viewBox: "0 0 24 24",
@@ -27,6 +27,6 @@ CloudSnow.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-CloudSnow.displayName = "CloudSnow"
+CloudSnow.displayName = "CloudSnow";

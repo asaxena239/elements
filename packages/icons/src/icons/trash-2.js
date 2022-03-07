@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const Trash2 = forwardRef(function Trash2(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <path d="M3 6H5H21"></path>
@@ -9,13 +9,13 @@ export const Trash2 = forwardRef(function Trash2(props, ref) {
       <path d="M10 11V17"></path>
       <path d="M14 11V17"></path>
     </svg>
-  )
-})
+  );
+});
 
 Trash2.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 Trash2.defaultProps = {
   viewBox: "0 0 24 24",
@@ -23,6 +23,6 @@ Trash2.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-Trash2.displayName = "Trash2"
+Trash2.displayName = "Trash2";

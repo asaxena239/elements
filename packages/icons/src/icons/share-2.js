@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const Share2 = forwardRef(function Share2(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <path d="M18 8C19.6569 8 21 6.65685 21 5C21 3.34315 19.6569 2 18 2C16.3431 2 15 3.34315 15 5C15 6.65685 16.3431 8 18 8Z"></path>
@@ -10,13 +10,13 @@ export const Share2 = forwardRef(function Share2(props, ref) {
       <path d="M8.59 13.51L15.42 17.49"></path>
       <path d="M15.41 6.51L8.59 10.49"></path>
     </svg>
-  )
-})
+  );
+});
 
 Share2.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 Share2.defaultProps = {
   viewBox: "0 0 24 24",
@@ -24,6 +24,6 @@ Share2.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-Share2.displayName = "Share2"
+Share2.displayName = "Share2";

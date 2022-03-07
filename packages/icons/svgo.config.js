@@ -4,5 +4,6 @@ module.exports = {
     { name: "mergePaths", active: false },
     { name: "convertShapeToPath", active: false },
     { name: "removeAttrs", params: { attrs: "(fill|stroke.*)" } },
+    { name: "removeDimensions", active: true },
   ],
 }

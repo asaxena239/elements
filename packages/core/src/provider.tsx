@@ -1,16 +1,18 @@
-import React, { PropsWithChildren } from "react"
+import { Fragment, PropsWithChildren } from "react"
 import { ThemeProvider } from "styled-components"
-import { baseTheme } from "./base-theme"
+import { useTheme } from "./core-hooks"
+import { CustomTheme } from "./theme"
 import { Reset } from "./reset"
 
-export function ElementsProvider({
-  theme = {},
+export function DoorsProvider({
+  theme: customTheme,
   children,
-}: PropsWithChildren<{ theme?: Partial<typeof baseTheme> }>) {
+}: PropsWithChildren<{ theme: CustomTheme }>) {
+  const theme = useTheme(customTheme || {})
   return (
-    <ThemeProvider theme={{ ...baseTheme, ...theme }}>
+    <ThemeProvider theme={theme}>
       <Reset />
-      {children}
+      <Fragment>{children}</Fragment>
     </ThemeProvider>
   )
 }

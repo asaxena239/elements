@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const Move = forwardRef(function Move(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <path d="M5 9L2 12L5 15"></path>
@@ -11,13 +11,13 @@ export const Move = forwardRef(function Move(props, ref) {
       <path d="M2 12H22"></path>
       <path d="M12 2V22"></path>
     </svg>
-  )
-})
+  );
+});
 
 Move.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 Move.defaultProps = {
   viewBox: "0 0 24 24",
@@ -25,6 +25,6 @@ Move.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-Move.displayName = "Move"
+Move.displayName = "Move";

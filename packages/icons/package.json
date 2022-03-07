@@ -1,9 +1,8 @@
 {
   "license": "MIT",
-  "name": "@rent_avail/icons",
-  "version": "0.1.1",
-  "description": "Icon library for Avail Design System",
-  "main": "build/index.js",
+  "name": "@doors/icons",
+  "version": "0.1.2",
+  "description": "Icon package for doors",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
@@ -12,10 +11,8 @@
   ],
   "scripts": {
     "test": "echo 'run tests from the root directory'",
-    "compile": "svgo -f ./svg --config svgo.config.js && rm -rf src/icons && node ./scripts/build.js",
-    "build": "concurrently \"yarn:build:*\"",
-    "build:module": "rm -rf dist && babel --root-mode upward src --out-dir dist --copy-files",
-    "build:bundle": "rm -rf build && rollup --config rollup.config.js",
+    "build": "rm -rf dist && babel --root-mode upward src --out-dir dist --copy-files",
+    "build:src": "svgo -f ./svg --config svgo.config.js && rm -rf src/icons && ts-node ./scripts/build.ts",
     "prepack": "yarn build"
   },
   "publishConfig": {
@@ -25,18 +22,22 @@
     "Patrick Krawczykowski <patrick@dreadful.design>"
   ],
   "peerDependencies": {
-    "react": "^17.0.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "cheerio": "^1.0.0-rc.10",
-    "concurrently": "^6.2.1",
-    "feather-icons": "^4.28.0",
     "html-minifier": "^4.0.0",
-    "prettier-eslint": "^13.0.0",
-    "rollup": "^2.56.3",
-    "rollup-plugin-babel": "^4.4.0",
-    "svgo": "^2.5.0",
+    "microbundle": "^0.14.2",
+    "svgo": "^2.8.0",
     "uppercamelcase": "^3.0.0"
+  },
+  "gitHead": "5c79055eea3228a52c57944adc20224a1595520e",
+  "dependencies": {
+    "prop-types": "^15.8.1"
   }
 }

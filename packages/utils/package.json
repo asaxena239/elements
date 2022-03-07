@@ -1,19 +1,26 @@
 {
-  "name": "@rent_avail/utils",
-  "version": "0.5.1",
-  "description": "Utility functions",
-  "source": "src/index.js",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "esmodule": "dist/index.modern.js",
+  "license": "MIT",
+  "name": "@doors/utils",
+  "version": "0.0.5",
+  "description": "Utility package for doors",
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
   "files": [
     "dist"
   ],
   "scripts": {
+    "mb": "microbundle --jsx 'React.createElement' --jsxImportSource react --globals react/jsx-runtime=jsx",
     "test": "echo 'run tests from the root directory'",
-    "build": "microbundle --jsx React.createElement",
-    "watch": "microbundle watch --no-compress --jsx React.createElement",
+    "build": "yarn mb",
+    "watch": "yarn mb watch --no-compress",
     "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "microbundle": "^0.14.2",
+    "react": "^17.0.2"
   },
   "publishConfig": {
     "access": "public"
@@ -21,14 +28,5 @@
   "contributors": [
     "Patrick Krawczykowski <patrick@dreadful.design>"
   ],
-  "license": "MIT",
-  "peerDependencies": {
-    "react": "^16.13.1 || ^17.0.0",
-    "react-dom": "^16.13.1 || ^17.0.0"
-  },
-  "dependencies": {
-    "calendar-dates": "^2.6.1",
-    "intersection-observer": "^0.12.0",
-    "resize-observer-polyfill": "^1.5.1"
-  }
+  "gitHead": "5c79055eea3228a52c57944adc20224a1595520e"
 }

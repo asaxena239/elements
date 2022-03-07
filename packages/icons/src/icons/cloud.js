@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const Cloud = forwardRef(function Cloud(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <g clip-path="url(#clip0)">
@@ -13,13 +13,13 @@ export const Cloud = forwardRef(function Cloud(props, ref) {
         </clippath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
 Cloud.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 Cloud.defaultProps = {
   viewBox: "0 0 24 24",
@@ -27,6 +27,6 @@ Cloud.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-Cloud.displayName = "Cloud"
+Cloud.displayName = "Cloud";

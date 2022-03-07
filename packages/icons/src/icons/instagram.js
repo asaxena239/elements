@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const Instagram = forwardRef(function Instagram(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <g clip-path="url(#clip0)">
@@ -14,13 +14,13 @@ export const Instagram = forwardRef(function Instagram(props, ref) {
         </clippath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
 Instagram.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 Instagram.defaultProps = {
   viewBox: "0 0 24 24",
@@ -28,6 +28,6 @@ Instagram.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-Instagram.displayName = "Instagram"
+Instagram.displayName = "Instagram";

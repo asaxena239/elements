@@ -1,7 +1,7 @@
-import React, { forwardRef } from "react"
-import p from "prop-types"
+import React, { forwardRef } from "react";
+import p from "prop-types";
 export const UploadCloud = forwardRef(function UploadCloud(props, ref) {
-  const { color = "currentColor", size = 24, ...rest } = props
+  const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
       <g clip-path="url(#clip0)">
@@ -16,13 +16,13 @@ export const UploadCloud = forwardRef(function UploadCloud(props, ref) {
         </clippath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
 UploadCloud.propTypes = {
   color: p.string,
   size: p.oneOfType([p.string, p.number]),
-}
+};
 
 UploadCloud.defaultProps = {
   viewBox: "0 0 24 24",
@@ -30,6 +30,6 @@ UploadCloud.defaultProps = {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
-}
+};
 
-UploadCloud.displayName = "UploadCloud"
+UploadCloud.displayName = "UploadCloud";
