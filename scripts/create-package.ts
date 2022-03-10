@@ -59,7 +59,4 @@ if (!packages.includes(packageName)) {
     `packages/${packageName}/tests/package.test.tsx`,
     `packages/${packageName}/tests/${packageName}.test.tsx`
   )
-  spawn("lerna", ["bootstrap"], {
-    stdio: "inherit",
-  })
 }
