@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "name": "@doors/controls",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "User controls for doors system",
   "source": "./src/index.ts",
   "main": "./dist/index.js",
@@ -32,11 +32,11 @@
     "styled-system": "^5.1.5"
   },
   "dependencies": {
-    "@doors/core": "^0.1.4",
-    "@doors/hooks": "^0.0.5",
-    "@doors/icons": "^0.1.2",
-    "@doors/overlays": "^0.1.5",
-    "@doors/utils": "^0.0.5",
+    "@doors/core": "^0.1.5",
+    "@doors/hooks": "^0.0.6",
+    "@doors/icons": "^0.1.3",
+    "@doors/overlays": "^0.1.6",
+    "@doors/utils": "^0.0.6",
     "@styled-system/css": "^5.1.5",
     "clsx": "^1.1.1",
     "framer-motion": "4.1.17"

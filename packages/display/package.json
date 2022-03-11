@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "name": "@doors/display",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Doors design system package for display components",
   "source": "src/index.ts",
   "main": "dist/index.js",

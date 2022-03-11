@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.1.6
+
+### Patch Changes
+
+- Update to doors and build packages with changesets
+- Updated dependencies
+  - @doors/core@0.1.5
+  - @doors/hooks@0.0.6
+  - @doors/icons@0.1.3
+  - @doors/utils@0.0.6
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
@@ -7,45 +18,24 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @doors/overlays
 
-
-
-
-
 ## [0.1.4](/compare/@doors/overlays@0.1.3...@doors/overlays@0.1.4) (2022-02-08)
 
 **Note:** Version bump only for package @doors/overlays
-
-
-
-
 
 ## [0.1.3](/compare/@doors/overlays@0.1.2...@doors/overlays@0.1.3) (2022-02-05)
 
 **Note:** Version bump only for package @doors/overlays
 
-
-
-
-
 ## [0.1.2](/compare/@doors/overlays@0.1.1...@doors/overlays@0.1.2) (2022-01-14)
 
 **Note:** Version bump only for package @doors/overlays
-
-
-
-
 
 ## [0.1.1](/compare/@doors/overlays@0.1.0...@doors/overlays@0.1.1) (2022-01-11)
 
 **Note:** Version bump only for package @doors/overlays
 
-
-
-
-
 # 0.1.0 (2022-01-11)
-
 
 ### Features
 
-* update color token usage for controls 46bd602
+- update color token usage for controls 46bd602

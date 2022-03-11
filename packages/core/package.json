@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "name": "@doors/core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Core package for doors system",
   "source": "./src/index.ts",
   "main": "./dist/index.js",

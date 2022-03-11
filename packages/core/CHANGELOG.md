@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.5
+
+### Patch Changes
+
+- Update to doors and build packages with changesets
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
@@ -7,42 +13,24 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @doors/core
 
-
-
-
-
 ## [0.1.3](/compare/@doors/core@0.1.2...@doors/core@0.1.3) (2022-02-05)
 
 **Note:** Version bump only for package @doors/core
-
-
-
-
 
 ## [0.1.2](/compare/@doors/core@0.1.1...@doors/core@0.1.2) (2022-01-14)
 
 **Note:** Version bump only for package @doors/core
 
-
-
-
-
 ## [0.1.1](/compare/@doors/core@0.1.0...@doors/core@0.1.1) (2022-01-11)
 
 **Note:** Version bump only for package @doors/core
 
-
-
-
-
 # 0.1.0 (2022-01-11)
-
 
 ### Bug Fixes
 
-* change module file to mjs 5c79055
-
+- change module file to mjs 5c79055
 
 ### Features
 
-* update color token usage for controls 46bd602
+- update color token usage for controls 46bd602

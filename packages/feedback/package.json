@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "name": "@doors/feedback",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Feedback components for the doors design system",
   "source": "src/index.ts",
   "main": "./dist/index.js",
