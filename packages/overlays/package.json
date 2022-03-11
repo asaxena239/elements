@@ -37,7 +37,6 @@
     "@doors/utils": "^0.0.6",
     "framer-motion": "4.1.17"
   },
-  "gitHead": "8671374da157da4b5f714f49ac1f2d40a74aa438",
   "devDependencies": {
     "microbundle": "^0.14.2"
   }

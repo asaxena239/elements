@@ -36,7 +36,6 @@
     "svgo": "^2.8.0",
     "uppercamelcase": "^3.0.0"
   },
-  "gitHead": "5c79055eea3228a52c57944adc20224a1595520e",
   "dependencies": {
     "prop-types": "^15.8.1"
   }

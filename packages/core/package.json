@@ -36,7 +36,6 @@
     "deepmerge": "^4.2.2",
     "styled-system": "^5.1.5"
   },
-  "gitHead": "8671374da157da4b5f714f49ac1f2d40a74aa438",
   "devDependencies": {
     "microbundle": "^0.14.2"
   }

@@ -30,7 +30,6 @@
     "react-is": "^17.0.2",
     "styled-components": "^5.3.0"
   },
-  "gitHead": "5c79055eea3228a52c57944adc20224a1595520e",
   "devDependencies": {
     "microbundle": "^0.14.2"
   }
