@@ -1,6 +1,9 @@
 {
   "name": "@doors/codemods",
   "version": "0.0.2",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest",
     "generate-codemod": "create-codemod-app:generate; yarn test",
