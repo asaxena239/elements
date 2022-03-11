@@ -1,7 +1,12 @@
 #! /usr/bin/env node
+const path = require("path")
 const { program } = require("commander")
 const jscodeshiftExecutable = require.resolve(".bin/jscodeshift")
 const { spawn } = require("child_process")
+
+const transformerDirectory = path.join(__dirname, "../", "transforms")
+
+console.log(transformerDirectory)
 
 program
   .argument("<migrationFiles>", "Path of files to transform.")
@@ -19,7 +24,7 @@ program
       jscodeshiftExecutable,
       [
         "-t",
-        "./transforms/update-imports.js",
+        path.join(transformerDirectory, "update-imports.js"),
         migrationFiles,
         ...jsCodeshiftOptions,
       ],
