@@ -1868,6 +1868,7 @@ __metadata:
   resolution: "@doors/codemods@workspace:packages/codemods"
   dependencies:
     commander: ^9.0.0
+    jest: ^27.5.1
     jscodeshift: ^0.13.1
   bin:
     migrate-imports: ./bin/run.update-imports.js

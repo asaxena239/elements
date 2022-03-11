@@ -1,1 +1,1 @@
-import { thing } from "@rent_avail/thing"
+import Avatar, { AvatarGroup } from "@rent_avail/avatar"

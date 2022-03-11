@@ -5,10 +5,24 @@ const { spawn } = require("child_process")
 
 program
   .argument("<migrationFiles>", "Path of files to transform.")
-  .action((migrationFiles) => {
+  .option("-d, --dry")
+  .option("-p, --print")
+  .action((migrationFiles, options) => {
+    const jsCodeshiftOptions = []
+    if (options.dry) {
+      jsCodeshiftOptions.push("-d")
+    }
+    if (options.print) {
+      jsCodeshiftOptions.push("-p")
+    }
     spawn(
       jscodeshiftExecutable,
-      ["-t", "./transforms/update-imports.js", migrationFiles],
+      [
+        "-t",
+        "./transforms/update-imports.js",
+        migrationFiles,
+        ...jsCodeshiftOptions,
+      ],
       {
         stdio: "inherit",
       }

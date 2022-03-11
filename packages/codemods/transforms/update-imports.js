@@ -57,15 +57,17 @@ function changePackage(source) {
 module.exports = function (file, api) {
   const j = api.jscodeshift
   const root = j(file.source)
-  const importDeclarations = root.find(codeshift.ImportDeclaration)
+  const importDeclarations = root.find(j.ImportDeclaration)
   importDeclarations.forEach((path) => {
     // Need to check for constants package and delete call expressions.
     const source = path.node.source.value
-    const specifiers = path.node.specifiers
+    const specifiers = path.node.specifiers.map((path) => {
+      return j.importSpecifier(path.local, path.local)
+    })
     if (source.includes("@rent_avail")) {
-      const newSource = codeshift.literal(changePackage(source))
-      const declaration = codeshift.importDeclaration(specifiers, newSource)
-      codeshift(path).replaceWith(declaration)
+      const newSource = j.literal(changePackage(source))
+      const declaration = j.importDeclaration(specifiers, newSource)
+      j(path).replaceWith(declaration)
     }
   })
   return root.toSource()
