@@ -1,12 +1,10 @@
 #! /usr/bin/env node
 const path = require("path")
 const { program } = require("commander")
+const execa = require("execa")
 const jscodeshiftExecutable = require.resolve(".bin/jscodeshift")
-const { spawn } = require("child_process")
 
 const transformerDirectory = path.join(__dirname, "../", "transforms")
-
-console.log(transformerDirectory)
 
 program
   .argument("<migrationFiles>", "Path of files to transform.")
@@ -20,7 +18,7 @@ program
     if (options.print) {
       jsCodeshiftOptions.push("-p")
     }
-    spawn(
+    execa(
       jscodeshiftExecutable,
       [
         "-t",
@@ -30,6 +28,7 @@ program
       ],
       {
         stdio: "inherit",
+        stripEof: false,
       }
     )
   })

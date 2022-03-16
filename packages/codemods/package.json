@@ -11,11 +11,10 @@
   },
   "author": "Patrick <patrick@dreadful.design>",
   "license": "ISC",
-  "bin": {
-    "migrate-imports": "./bin/run.update-imports.js"
-  },
+  "bin": "./bin/run.update-imports.js",
   "dependencies": {
     "commander": "^9.0.0",
+    "execa": "^6.1.0",
     "jscodeshift": "^0.13.1"
   },
   "devDependencies": {
