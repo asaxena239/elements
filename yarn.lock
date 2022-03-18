@@ -1863,6 +1863,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@doors/codemods@workspace:packages/codemods":
+  version: 0.0.0-use.local
+  resolution: "@doors/codemods@workspace:packages/codemods"
+  dependencies:
+    commander: ^9.0.0
+    execa: 3.4.0
+    jest: ^27.5.1
+    jscodeshift: ^0.13.1
+  bin:
+    "@doors/codemods": ./bin/doors-codemods.js
+  languageName: unknown
+  linkType: soft
+
 "@doors/controls@workspace:^, @doors/controls@workspace:packages/controls":
   version: 0.0.0-use.local
   resolution: "@doors/controls@workspace:packages/controls"
@@ -8144,19 +8157,6 @@ __metadata:
   checksum: abf7434315283e9aadc2a24bac0e00eab07ae4313b40cc239f89d84d7315ebdfd2fb1b5bf750a96bc1b4403d7237c7b2ebf60459be394d625ead4ca89b934391
   languageName: node
   linkType: hard
-
-"doors-codemods@workspace:packages/codemods":
-  version: 0.0.0-use.local
-  resolution: "doors-codemods@workspace:packages/codemods"
-  dependencies:
-    commander: ^9.0.0
-    execa: 3.4.0
-    jest: ^27.5.1
-    jscodeshift: ^0.13.1
-  bin:
-    doors-codemods: ./bin/doors-codemods.js
-  languageName: unknown
-  linkType: soft
 
 "doors-design@workspace:.":
   version: 0.0.0-use.local

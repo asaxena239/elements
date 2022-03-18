@@ -1,5 +1,5 @@
 {
-  "name": "doors-codemods",
+  "name": "@doors/codemods",
   "version": "0.0.5",
   "publishConfig": {
     "access": "public"
@@ -11,7 +11,9 @@
   },
   "author": "Patrick <patrick@dreadful.design>",
   "license": "ISC",
-  "bin": "./bin/doors-codemods.js",
+  "bin": {
+    "@doors/codemods": "./bin/doors-codemods.js"
+  },
   "dependencies": {
     "commander": "^9.0.0",
     "execa": "3.4.0",
