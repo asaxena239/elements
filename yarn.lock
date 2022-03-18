@@ -1863,9 +1863,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@doors/codemod@workspace:packages/codemods":
+"@doors/codemod@workspace:packages/codemod":
   version: 0.0.0-use.local
-  resolution: "@doors/codemod@workspace:packages/codemods"
+  resolution: "@doors/codemod@workspace:packages/codemod"
   dependencies:
     commander: ^9.0.0
     execa: 3.4.0
