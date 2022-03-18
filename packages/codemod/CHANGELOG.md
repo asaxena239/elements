@@ -1,5 +1,11 @@
 # @doors/codemods
 
+## 0.1.0
+
+### Minor Changes
+
+- 1ab4e21: Update codemod cli to be extendable
+
 ## 0.0.5
 
 ### Patch Changes
