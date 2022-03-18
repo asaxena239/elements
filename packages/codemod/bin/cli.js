@@ -6,10 +6,16 @@ const jscodeshiftExecutable = require.resolve(".bin/jscodeshift")
 const transformerDirectory = path.join(__dirname, "../", "transforms")
 
 program
+  .argument(
+    "<transform>",
+    `Type of transform to run, one of the following:
+    - update-imports
+    `
+  )
   .argument("<migrationFiles>", "Path of files to transform.")
   .option("-d, --dry")
   .option("-p, --print")
-  .action((migrationFiles, options) => {
+  .action((transform, migrationFiles, options) => {
     const jsCodeshiftOptions = []
     if (options.dry) {
       jsCodeshiftOptions.push("-d")
@@ -21,7 +27,7 @@ program
       jscodeshiftExecutable,
       [
         "-t",
-        path.join(transformerDirectory, "update-imports.js"),
+        path.join(transformerDirectory, `${transform}.js`),
         migrationFiles,
         ...jsCodeshiftOptions,
       ],
