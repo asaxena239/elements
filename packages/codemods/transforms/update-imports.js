@@ -35,7 +35,8 @@ function changePackage(source) {
         ["grid", "@doors/core"],
         ["container", "@doors/core"],
         ["card", "@doors/core"],
-        ["constants", "@doors/core"],
+        // Don't do anything with constants, too complicated.
+        ["constants", "@rent_avail/elements/constants"],
         ["button", "@doors/controls"],
         ["toggle", "@doors/controls"],
         ["text-input", "@doors/controls"],
@@ -59,9 +60,11 @@ module.exports = function (file, api) {
   const root = j(file.source)
   const importDeclarations = root.find(j.ImportDeclaration)
   importDeclarations.forEach((path) => {
-    // Need to check for constants package and delete call expressions.
     const source = path.node.source.value
     const specifiers = path.node.specifiers.map((path) => {
+      if (path.imported && path.imported.name !== path.local.name) {
+        return j.importSpecifier(path.imported, path.local)
+      }
       return j.importSpecifier(path.local, path.local)
     })
     if (source.includes("@rent_avail")) {
