@@ -27,6 +27,5 @@
     "styled-components": "^5.3.3",
     "styled-system": "^5.1.5"
   },
-  "license": "MIT",
-  "gitHead": "5c79055eea3228a52c57944adc20224a1595520e"
+  "license": "MIT"
 }
