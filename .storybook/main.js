@@ -6,4 +6,7 @@ module.exports = {
   ],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
   staticDirs: ["../public"],
+  features: {
+    postcss: false,
+  },
 }
