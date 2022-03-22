@@ -3,10 +3,13 @@
   "name": "@doors/feedback",
   "version": "0.0.8",
   "description": "Feedback components for the doors design system",
-  "source": "src/index.ts",
+  "source": "./src/index.ts",
   "main": "./dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "module": "./dist/index.m.js",
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.js"
+  },
   "sideEffects": false,
   "files": [
     "dist"

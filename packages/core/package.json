@@ -5,7 +5,11 @@
   "description": "Core package for doors system",
   "source": "./src/index.ts",
   "main": "./dist/index.js",
-  "module": "./dist/index.esm.js",
+  "module": "./dist/index.m.js",
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.js"
+  },
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
