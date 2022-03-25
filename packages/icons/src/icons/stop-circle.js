@@ -4,8 +4,8 @@ export const StopCircle = forwardRef(function StopCircle(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
-      <path d="M15 9H9V15H15V9Z"></path>
+      <circle cx="12" cy="12" r="10"></circle>
+      <rect x="9" y="9" width="6" height="6"></rect>
     </svg>
   );
 });

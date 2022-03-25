@@ -4,9 +4,9 @@ export const BarChart2 = forwardRef(function BarChart2(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M18 20V10"></path>
-      <path d="M12 20V4"></path>
-      <path d="M6 20V14"></path>
+      <line x1="18" y1="20" x2="18" y2="10"></line>
+      <line x1="12" y1="20" x2="12" y2="4"></line>
+      <line x1="6" y1="20" x2="6" y2="14"></line>
     </svg>
   );
 });

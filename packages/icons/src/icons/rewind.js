@@ -4,8 +4,8 @@ export const Rewind = forwardRef(function Rewind(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M11 19L2 12L11 5V19Z"></path>
-      <path d="M22 19L13 12L22 5V19Z"></path>
+      <polygon points="11 19 2 12 11 5 11 19"></polygon>
+      <polygon points="22 19 13 12 22 5 22 19"></polygon>
     </svg>
   );
 });

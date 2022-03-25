@@ -4,11 +4,11 @@ export const Crosshair = forwardRef(function Crosshair(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
-      <path d="M22 12H18"></path>
-      <path d="M6 12H2"></path>
-      <path d="M12 6V2"></path>
-      <path d="M12 22V18"></path>
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="22" y1="12" x2="18" y2="12"></line>
+      <line x1="6" y1="12" x2="2" y2="12"></line>
+      <line x1="12" y1="6" x2="12" y2="2"></line>
+      <line x1="12" y1="22" x2="12" y2="18"></line>
     </svg>
   );
 });

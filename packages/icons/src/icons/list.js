@@ -4,16 +4,12 @@ export const List = forwardRef(function List(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <g clip-path="url(#clip0)">
-        <path d="M8 6H21"></path>
-        <path d="M8 12H21"></path>
-        <path d="M8 18H21"></path>
-      </g>
-      <defs>
-        <clippath id="clip0">
-          <rect width="24" height="24"></rect>
-        </clippath>
-      </defs>
+      <line x1="8" y1="6" x2="21" y2="6"></line>
+      <line x1="8" y1="12" x2="21" y2="12"></line>
+      <line x1="8" y1="18" x2="21" y2="18"></line>
+      <line x1="3" y1="6" x2="3.01" y2="6"></line>
+      <line x1="3" y1="12" x2="3.01" y2="12"></line>
+      <line x1="3" y1="18" x2="3.01" y2="18"></line>
     </svg>
   );
 });

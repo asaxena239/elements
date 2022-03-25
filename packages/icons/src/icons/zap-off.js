@@ -4,10 +4,10 @@ export const ZapOff = forwardRef(function ZapOff(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M12.41 6.75L13 2L10.57 4.92"></path>
-      <path d="M18.57 12.91L21 10H15.66"></path>
-      <path d="M8 8L3 14H12L11 22L16 16"></path>
-      <path d="M1 1L23 23"></path>
+      <polyline points="12.41 6.75 13 2 10.57 4.92"></polyline>
+      <polyline points="18.57 12.91 21 10 15.66 10"></polyline>
+      <polyline points="8 8 3 14 12 14 11 22 16 16"></polyline>
+      <line x1="1" y1="1" x2="23" y2="23"></line>
     </svg>
   );
 });

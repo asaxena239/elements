@@ -4,11 +4,11 @@ export const Codepen = forwardRef(function Codepen(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z"></path>
-      <path d="M12 22V15.5"></path>
-      <path d="M22 8.5L12 15.5L2 8.5"></path>
-      <path d="M2 15.5L12 8.5L22 15.5"></path>
-      <path d="M12 2V8.5"></path>
+      <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+      <line x1="12" y1="22" x2="12" y2="15.5"></line>
+      <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+      <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+      <line x1="12" y1="2" x2="12" y2="8.5"></line>
     </svg>
   );
 });

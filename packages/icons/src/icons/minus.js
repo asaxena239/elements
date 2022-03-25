@@ -4,7 +4,7 @@ export const Minus = forwardRef(function Minus(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M5 12H19"></path>
+      <line x1="5" y1="12" x2="19" y2="12"></line>
     </svg>
   );
 });

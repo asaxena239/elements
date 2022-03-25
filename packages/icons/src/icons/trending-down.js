@@ -4,8 +4,8 @@ export const TrendingDown = forwardRef(function TrendingDown(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M23 18L13.5 8.5L8.5 13.5L1 6"></path>
-      <path d="M17 18H23V12"></path>
+      <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
+      <polyline points="17 18 23 18 23 12"></polyline>
     </svg>
   );
 });

@@ -4,7 +4,7 @@ export const Bluetooth = forwardRef(function Bluetooth(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M6.5 6.5L17.5 17.5L12 23V1L17.5 6.5L6.5 17.5"></path>
+      <path d="M7 7l10 10-5 5V2l5 5L7 17"></path>
     </svg>
   );
 });

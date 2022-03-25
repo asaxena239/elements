@@ -4,8 +4,8 @@ export const SkipForward = forwardRef(function SkipForward(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M5 4L15 12L5 20V4Z"></path>
-      <path d="M19 5V19"></path>
+      <polygon points="5 4 15 12 5 20 5 4"></polygon>
+      <line x1="19" y1="5" x2="19" y2="19"></line>
     </svg>
   );
 });

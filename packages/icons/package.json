@@ -34,6 +34,7 @@
     "html-minifier": "^4.0.0",
     "microbundle": "^0.14.2",
     "svgo": "^2.8.0",
+    "ts-node": "^10.7.0",
     "uppercamelcase": "^3.0.0"
   },
   "dependencies": {

@@ -4,7 +4,7 @@ export const Zap = forwardRef(function Zap(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"></path>
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
     </svg>
   );
 });

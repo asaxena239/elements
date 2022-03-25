@@ -4,9 +4,7 @@ export const Archive = forwardRef(function Archive(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M21 8V21H3V8"></path>
-      <path d="M23 3H1V8H23V3Z"></path>
-      <path d="M10 12H14"></path>
+      <path d="M20 9v9a2 2 0 01-2 2H6a2 2 0 01-2-2V9m16-5H4a2 2 0 00-2 2v1a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-10 9h4"></path>
     </svg>
   );
 });

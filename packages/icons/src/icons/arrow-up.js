@@ -4,8 +4,8 @@ export const ArrowUp = forwardRef(function ArrowUp(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M12 19V5"></path>
-      <path d="M5 12L12 5L19 12"></path>
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
     </svg>
   );
 });

@@ -4,8 +4,8 @@ export const Battery = forwardRef(function Battery(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M17 6H3C1.89543 6 1 6.89543 1 8V16C1 17.1046 1.89543 18 3 18H17C18.1046 18 19 17.1046 19 16V8C19 6.89543 18.1046 6 17 6Z"></path>
-      <path d="M23 13V11"></path>
+      <rect x="2" y="7" width="16" height="10" rx="2" ry="2"></rect>
+      <line x1="22" x2="22" y1="11" y2="13"></line>
     </svg>
   );
 });

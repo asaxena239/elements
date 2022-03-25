@@ -4,7 +4,7 @@ export const Check = forwardRef(function Check(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M20 6L9 17L4 12"></path>
+      <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
   );
 });

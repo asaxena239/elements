@@ -4,8 +4,8 @@ export const Underline = forwardRef(function Underline(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M6 3V10C6 11.5913 6.63214 13.1174 7.75736 14.2426C8.88258 15.3679 10.4087 16 12 16C13.5913 16 15.1174 15.3679 16.2426 14.2426C17.3679 13.1174 18 11.5913 18 10V3"></path>
-      <path d="M4 21H20"></path>
+      <path d="M6 4v6a6 6 0 0012 0V4"></path>
+      <line x1="4" y1="20" x2="20" y2="20"></line>
     </svg>
   );
 });

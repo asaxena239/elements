@@ -4,7 +4,7 @@ export const ChevronDown = forwardRef(function ChevronDown(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M6 9L12 15L18 9"></path>
+      <polyline points="6 9 12 15 18 9"></polyline>
     </svg>
   );
 });

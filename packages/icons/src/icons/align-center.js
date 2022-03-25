@@ -4,10 +4,9 @@ export const AlignCenter = forwardRef(function AlignCenter(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M18 10H6"></path>
-      <path d="M21 6H3"></path>
-      <path d="M21 14H3"></path>
-      <path d="M18 18H6"></path>
+      <line x1="21" y1="6" x2="3" y2="6"></line>
+      <line x1="17" y1="12" x2="7" y2="12"></line>
+      <line x1="19" y1="18" x2="5" y2="18"></line>
     </svg>
   );
 });

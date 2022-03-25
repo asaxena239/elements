@@ -4,13 +4,13 @@ export const Aperture = forwardRef(function Aperture(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
-      <path d="M14.31 8L20.05 17.94"></path>
-      <path d="M9.69 8H21.17"></path>
-      <path d="M7.38 12.0001L13.12 2.06006"></path>
-      <path d="M9.69001 16L3.95001 6.06"></path>
-      <path d="M14.31 16H2.82999"></path>
-      <path d="M16.62 12L10.88 21.94"></path>
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+      <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+      <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+      <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+      <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+      <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
     </svg>
   );
 });

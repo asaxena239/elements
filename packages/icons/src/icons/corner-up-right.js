@@ -4,8 +4,8 @@ export const CornerUpRight = forwardRef(function CornerUpRight(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M15 14L20 9L15 4"></path>
-      <path d="M4 20V13C4 11.9391 4.42143 10.9217 5.17157 10.1716C5.92172 9.42143 6.93913 9 8 9H20"></path>
+      <polyline points="15 14 20 9 15 4"></polyline>
+      <path d="M4 20v-7a4 4 0 014-4h12"></path>
     </svg>
   );
 });

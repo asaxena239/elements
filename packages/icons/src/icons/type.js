@@ -4,9 +4,9 @@ export const Type = forwardRef(function Type(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M4 7V4H20V7"></path>
-      <path d="M9 20H15"></path>
-      <path d="M12 4V20"></path>
+      <polyline points="4 7 4 4 20 4 20 7"></polyline>
+      <line x1="9" y1="20" x2="15" y2="20"></line>
+      <line x1="12" y1="4" x2="12" y2="20"></line>
     </svg>
   );
 });

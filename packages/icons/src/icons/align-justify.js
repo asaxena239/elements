@@ -4,10 +4,9 @@ export const AlignJustify = forwardRef(function AlignJustify(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M21 10H3"></path>
-      <path d="M21 6H3"></path>
-      <path d="M21 14H3"></path>
-      <path d="M21 18H3"></path>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
     </svg>
   );
 });

@@ -4,7 +4,7 @@ export const Filter = forwardRef(function Filter(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M22 3H2L10 12.46V19L14 21V12.46L22 3Z"></path>
+      <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
     </svg>
   );
 });

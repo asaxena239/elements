@@ -4,7 +4,7 @@ export const Navigation2 = forwardRef(function Navigation2(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M12 2L19 21L12 17L5 21L12 2Z"></path>
+      <polygon points="12 2 19 21 12 17 5 21 12 2"></polygon>
     </svg>
   );
 });

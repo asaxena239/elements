@@ -4,8 +4,8 @@ export const MousePointer = forwardRef(function MousePointer(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M3 3L10.07 19.97L12.58 12.58L19.97 10.07L3 3Z"></path>
-      <path d="M13 13L19 19"></path>
+      <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"></path>
+      <path d="M13 13l6 6"></path>
     </svg>
   );
 });

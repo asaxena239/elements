@@ -4,8 +4,8 @@ export const ChevronsUp = forwardRef(function ChevronsUp(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M17 11L12 6L7 11"></path>
-      <path d="M17 18L12 13L7 18"></path>
+      <polyline points="17 11 12 6 7 11"></polyline>
+      <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
   );
 });

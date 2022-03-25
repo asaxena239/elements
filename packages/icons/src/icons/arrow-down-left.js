@@ -4,8 +4,8 @@ export const ArrowDownLeft = forwardRef(function ArrowDownLeft(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M17 7L7 17"></path>
-      <path d="M17 17H7V7"></path>
+      <line x1="17" y1="7" x2="7" y2="17"></line>
+      <polyline points="17 17 7 17 7 7"></polyline>
     </svg>
   );
 });

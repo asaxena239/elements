@@ -7,9 +7,9 @@ export const ArrowRightCircle = forwardRef(function ArrowRightCircle(
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
-      <path d="M12 16L16 12L12 8"></path>
-      <path d="M8 12H16"></path>
+      <circle cx="12" cy="12" r="10"></circle>
+      <polyline points="12 16 16 12 12 8"></polyline>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
     </svg>
   );
 });

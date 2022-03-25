@@ -4,7 +4,7 @@ export const Edit2 = forwardRef(function Edit2(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M16 3L21 8L8 21H3V16L16 3Z"></path>
+      <path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
     </svg>
   );
 });

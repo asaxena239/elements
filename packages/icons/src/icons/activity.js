@@ -4,7 +4,7 @@ export const Activity = forwardRef(function Activity(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M22 12H18L15 21L9 3L6 12H2"></path>
+      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
     </svg>
   );
 });

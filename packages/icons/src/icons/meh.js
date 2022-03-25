@@ -4,10 +4,10 @@ export const Meh = forwardRef(function Meh(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
-      <path d="M8 15H16"></path>
-      <path d="M9 9H9.01"></path>
-      <path d="M15 9H15.01"></path>
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="8" y1="15" x2="16" y2="15"></line>
+      <line x1="9" y1="9" x2="9.01" y2="9"></line>
+      <line x1="15" y1="9" x2="15.01" y2="9"></line>
     </svg>
   );
 });

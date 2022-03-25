@@ -4,8 +4,8 @@ export const Terminal = forwardRef(function Terminal(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M4 17L10 11L4 5"></path>
-      <path d="M12 19H20"></path>
+      <polyline points="4 17 10 11 4 5"></polyline>
+      <line x1="12" y1="19" x2="20" y2="19"></line>
     </svg>
   );
 });

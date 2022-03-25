@@ -4,9 +4,9 @@ export const VolumeX = forwardRef(function VolumeX(props, ref) {
   const { color = "currentColor", size = 24, ...rest } = props;
   return (
     <svg {...rest} ref={ref} stroke={color} width={size} height={size}>
-      <path d="M11 5L6 9H2V15H6L11 19V5Z"></path>
-      <path d="M23 9L17 15"></path>
-      <path d="M17 9L23 15"></path>
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
     </svg>
   );
 });
