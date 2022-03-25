@@ -70,6 +70,12 @@ module.exports = function (file, api) {
 
     // TODO: Deal with typography changes differently. Remove indentifiers to Text and Heading and insert Box components.
 
+    if (source.includes("@rent_avail/typography")) {
+      path.node.specifiers.forEach((specifier) => {
+        console.log(specifier)
+      })
+    }
+
     if (source.includes("@rent_avail")) {
       const newSource = j.literal(changePackage(source))
       const declaration = j.importDeclaration(specifiers, newSource)

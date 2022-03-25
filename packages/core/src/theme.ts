@@ -65,8 +65,11 @@ export const colorModes = {
   },
   avail: {
     brand: colors.blue_500,
+    brandSubtle: colors.blue_100,
+    brandContrast: colors.blue_900,
     brandSecondary: colors.green_500,
-    brandSecondaryDark: colors.green_900,
+    brandSecondarySubtle: colors.green_100,
+    brandSecondaryContrast: colors.green_900,
     ui: colors.ui_100,
     uiSecondary: colors.ui_500,
     uiContrast: colors.ui_700,
@@ -153,6 +156,7 @@ export const baseTheme = {
     hero: {
       lineHeight: "heading",
       fontSize: "hero",
+      fontWeight: "light",
     },
     button: {
       lineHeight: "body",

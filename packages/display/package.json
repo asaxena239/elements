@@ -34,7 +34,10 @@
     "styled-components": "^5.X.X"
   },
   "dependencies": {
-    "@doors/core": "workspace:^"
+    "@doors/core": "workspace:^",
+    "@doors/overlays": "workspace:^",
+    "@doors/utils": "workspace:^",
+    "framer-motion": "^6.2.8"
   },
   "devDependencies": {
     "microbundle": "^0.14.2"

@@ -21,8 +21,8 @@ export async function getDocument(pathname, basePath = "docs") {
  * @param {string} basePath
  * @returns {Promise}
  */
-export async function getDocumentPaths(glob, basePath = "docs") {
-  return await fg(glob, { cwd: path.resolve(basePath) })
+export function getDocumentPaths(glob, basePath = "docs") {
+  return fg(glob, { cwd: path.resolve(basePath) })
 }
 
 export function removePathSegments(path, segments) {
