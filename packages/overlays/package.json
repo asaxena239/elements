@@ -38,7 +38,7 @@
     "@doors/hooks": "^0.0.6",
     "@doors/icons": "^0.1.3",
     "@doors/utils": "^0.0.6",
-    "framer-motion": "6.2.8"
+    "framer-motion": "4.1.17"
   },
   "devDependencies": {
     "microbundle": "^0.14.2"
