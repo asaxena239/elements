@@ -37,9 +37,9 @@ const packageJson = `
     "Patrick Krawczykowski <patrick@dreadful.design>"
   ],
   "peerDependencies": {
-    "react": "^17.X.X",
-    "react-dom": "^17.X.X",
-    "react-is": "^17.X.X",
+    "react": "*",
+    "react-dom": "*",
+    "react-is": "*",
     "styled-components": "^5.X.X"
   }
 }

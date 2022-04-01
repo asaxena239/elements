@@ -28,9 +28,9 @@
     "Patrick Krawczykowski <patrick@dreadful.design>"
   ],
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-is": "^17.0.2",
+    "react": "*",
+    "react-dom": "*",
+    "react-is": "*",
     "styled-components": "^5.3.0"
   },
   "dependencies": {
@@ -38,7 +38,7 @@
     "@doors/hooks": "^0.0.6",
     "@doors/icons": "^0.1.3",
     "@doors/utils": "^0.0.6",
-    "framer-motion": "4.1.17"
+    "framer-motion": "6.2.8"
   },
   "devDependencies": {
     "microbundle": "^0.14.2"

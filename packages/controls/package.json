@@ -29,11 +29,11 @@
     "Patrick Krawczykowski <patrick@dreadful.design>"
   ],
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-is": "^17.0.2",
-    "styled-components": "^5.3.0",
-    "styled-system": "^5.1.5"
+    "react": "*",
+    "react-dom": "*",
+    "react-is": "*",
+    "styled-components": "*",
+    "styled-system": "*"
   },
   "dependencies": {
     "@doors/core": "workspace:^",
@@ -43,7 +43,7 @@
     "@doors/utils": "workspace:^",
     "@styled-system/css": "^5.1.5",
     "clsx": "^1.1.1",
-    "framer-motion": "4.1.17"
+    "framer-motion": "6.2.8"
   },
   "devDependencies": {
     "microbundle": "^0.14.2"

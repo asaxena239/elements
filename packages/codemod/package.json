@@ -13,7 +13,7 @@
   "license": "ISC",
   "bin": "./bin/doors-codemod.js",
   "dependencies": {
-    "commander": "^9.0.0",
+    "commander": "^9.1.0",
     "execa": "3.4.0",
     "jscodeshift": "^0.13.1"
   },

@@ -29,16 +29,16 @@
     "Patrick Krawczykowski <patrick@dreadful.design>"
   ],
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-is": "^17.0.2",
+    "react": "*",
+    "react-dom": "*",
+    "react-is": "*",
     "styled-components": "^5.3.0"
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
     "deepmerge": "^4.2.2",
-    "styled-system": "^5.1.5"
+    "styled-system": "*"
   },
   "devDependencies": {
     "microbundle": "^0.14.2"
