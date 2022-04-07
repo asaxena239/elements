@@ -22,25 +22,24 @@ interface AvatarGroupProps {
  */
 
 export function AvatarGroup({ children }) {
-  const [open, setOpen] = useState(false)
-  const avatarChildren = Children.map(children, (child) =>
-    cloneElement(child as ReactElement<any>, {
-      ref: (node) => {
-        console.log(node)
-      },
-      className: "avatar-group__item",
-    })
-  )
+  // const [open, setOpen] = useState(false)
+  // const avatarChildren = Children.map(children, (child) =>
+  //   cloneElement(child as ReactElement<any>, {
+  //     ref: (node) => {
+  //       console.log(node)
+  //     },
+  //   })
+  // )
   return (
     <Box
       sx={{
-        "& .avatar-group__item:not(:first-of-type)": {
+        "& *:not(:first-of-type)": {
           ml: "-1rem",
         },
       }}
     >
-      {avatarChildren}
-      <LazyMotion features={domAnimation}>
+      {children}
+      {/* <LazyMotion features={domAnimation}>
         <AnimatePresence>
           {open && (
             <Popover sx={{ pt: "1rem" }} targetRef={null}>
@@ -56,7 +55,7 @@ export function AvatarGroup({ children }) {
             </Popover>
           )}
         </AnimatePresence>
-      </LazyMotion>
+      </LazyMotion> */}
     </Box>
   )
 }

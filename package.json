@@ -10,6 +10,7 @@
     "clean": "yarn workspaces foreach -piv run rimraf node_modules",
     "create-package": "ts-node ./scripts/create-package",
     "release": "yarn workspaces foreach --parallel --no-private npm publish --tolerate-republish",
+    "release:storybook": "chromatic",
     "start": "concurrently \"yarn:start:*\"",
     "start:docs": "yarn workspace @doors/docs run dev",
     "start:packages": "yarn workspaces foreach -p -i -v -j unlimited --exclude @doors/docs run watch",

@@ -10,6 +10,9 @@ import { ToastProvider, useToast } from "@doors/feedback"
 
 export default {
   title: "Patterns/Transactions Table",
+  parameters: {
+    layout: "fullscreen",
+  },
   decorators: [
     (Story) => {
       return (
@@ -130,7 +133,7 @@ function TableRow({ date, type, amount, category, property }) {
   )
 }
 
-export function TransactionsTable() {
+export function TransactionsPage() {
   const { loading, error, data, refetch } = useAsyncData({
     lazy: true,
     url: "/transactions",
@@ -177,7 +180,7 @@ export function TransactionsTable() {
   )
 }
 
-TransactionsTable.parameters = {
+TransactionsPage.parameters = {
   msw: {
     handlers: [
       rest.get("/transactions", (req, res, ctx) => {
