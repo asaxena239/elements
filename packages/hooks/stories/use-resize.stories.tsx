@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import { Box } from "@doors/core"
-import { useResize } from "../src"
+import { useResize, useNewResize } from "../src"
 
 export default {
   title: "Packages/Hooks/Use Resize",
@@ -14,3 +14,14 @@ export function UseResizeExample() {
 }
 
 UseResizeExample.storyName = "Use Resize"
+
+export function NewResize() {
+  const target = useRef()
+  const bounds = useNewResize(target)
+  console.log(bounds)
+  return (
+    <Box ref={target} sx={{ width: 150 }}>
+      Hello New Resize
+    </Box>
+  )
+}

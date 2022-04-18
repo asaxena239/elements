@@ -1,3 +1,5 @@
+import { Box } from "@doors/core"
+import { Fragment } from "react"
 import { Avatar, AvatarGroup } from "../src/avatar"
 // import { AvatarsProvider } from "./src/avatars-provider"
 
@@ -10,11 +12,19 @@ const defaultPhoto =
 
 export function AvatarExample() {
   return (
-    <Avatar
-      photo={defaultPhoto}
-      name="Hello Tooltip"
-      email="tooltip@aalskdjf.com"
-    />
+    <Box sx={{ display: "flex", alignItems: "start" }}>
+      <Avatar photo={defaultPhoto} />
+      <Avatar initials="PK" />
+      <Avatar
+        label={
+          <Box>
+            <Box>Patrick Krawczykowski</Box>
+            <Box sx={{ text: "small" }}>patrick.krawczykowski@realtor.com</Box>
+          </Box>
+        }
+        initials="PK"
+      />
+    </Box>
   )
 }
 
@@ -24,8 +34,6 @@ export function AvatarWithLabelExample() {
       photo={defaultPhoto}
       label="patrick@dreadful.design"
       bg="blue_100"
-      name="Hello Tooltip"
-      email="tooltip@aalskdjf.com"
     />
   )
 }
@@ -45,18 +53,8 @@ export function AvatarGroupExample() {
   ]
   return (
     <AvatarGroup>
-      <Avatar
-        photo={defaultPhoto}
-        bg="blue_100"
-        name="Hello Tooltip"
-        email="tooltip@aalskdjf.com"
-      />
-      <Avatar
-        photo={defaultPhoto}
-        bg="blue_100"
-        name="Hello Tooltip"
-        email="tooltip@aalskdjf.com"
-      />
+      <Avatar bg="blue_100" initials="PK" />
+      <Avatar photo={defaultPhoto} bg="blue_100" />
     </AvatarGroup>
   )
 }
