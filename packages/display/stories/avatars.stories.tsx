@@ -15,26 +15,20 @@ export function AvatarExample() {
     <Box sx={{ display: "flex", alignItems: "start" }}>
       <Avatar photo={defaultPhoto} />
       <Avatar initials="PK" />
-      <Avatar
-        label={
-          <Box>
-            <Box>Patrick Krawczykowski</Box>
-            <Box sx={{ text: "small" }}>patrick.krawczykowski@realtor.com</Box>
-          </Box>
-        }
-        initials="PK"
-      />
+      <Avatar initials="PK">Patrick Krawczykowski</Avatar>
+      <Avatar initials="PK">
+        <Box>Patrick Krawczykowski</Box>
+        <Box sx={{ text: "small" }}>patrick.krawczykowski@realtor.com</Box>
+      </Avatar>
     </Box>
   )
 }
 
 export function AvatarWithLabelExample() {
   return (
-    <Avatar
-      photo={defaultPhoto}
-      label="patrick@dreadful.design"
-      bg="blue_100"
-    />
+    <Avatar photo={defaultPhoto} bg="blue_100">
+      patrick@dreadful.design
+    </Avatar>
   )
 }
 
