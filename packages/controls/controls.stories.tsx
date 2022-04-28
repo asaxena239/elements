@@ -19,24 +19,6 @@ import {
 } from "./src"
 
 export default { title: "Packages/Controls" }
-
-export function InputExample() {
-  return <Input label="Hello Input" />
-}
-
-InputExample.storyName = "Input"
-
-export function CheckboxExample() {
-  return (
-    <Stack>
-      <Checkbox id="checkbox-one" />
-      <Checkbox id="checkbox-two" label="Labeled checkbox" />
-    </Stack>
-  )
-}
-
-CheckboxExample.storyName = "Checkbox"
-
 export function RadioExample() {
   return (
     <RadioGroup
