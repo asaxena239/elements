@@ -48,7 +48,6 @@ export const Input = memo(
       >
         <Box
           {...labelProps}
-          role="label"
           as="span"
           className="label"
           sx={{

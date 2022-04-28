@@ -9,7 +9,7 @@ import {
   ForwardedRef,
   KeyboardEvent,
 } from "react"
-import { noop, wrapEvent, mergeRefs } from "@doors/utils"
+import { noop, wrapEvent, mergeRefs, getId } from "@doors/utils"
 import { SelectContext, SelectActions } from "./select/select-provider"
 import { useResize } from "@doors/hooks"
 import { SelectItemProps } from "./select/select-item"
@@ -30,19 +30,21 @@ export function useTextControl({
   function handleChange({ target }: ChangeEvent<HTMLInputElement>) {
     setRaised(!!target.value.length || isDate)
   }
+  const labelId = useRef(getId())
   return {
     raised,
     label,
     error,
     help,
     labelProps: {
-      htmlFor: id,
+      id: labelId.current,
     },
     textFieldProps: {
       ...props,
       id,
       type,
       value,
+      "aria-labelledby": labelId.current,
       onChange: wrapEvent(onChange, handleChange),
     },
     errorProps: {
@@ -50,7 +52,7 @@ export function useTextControl({
       role: "alert",
     },
     helpProps: {
-      hidden: error,
+      hidden: error || !help,
     },
   }
 }
@@ -72,6 +74,7 @@ export function useDiscreteControl({
   type = "checkbox",
   ...props
 }: DiscreteControlProps) {
+  const labelId = useRef(getId())
   const [checked, set] = useState<boolean>(defaultChecked)
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     set(event.target.checked)
@@ -96,8 +99,9 @@ export function useDiscreteControl({
       checked,
       onChange: wrapEvent(onChange, handleChange),
       hidden: true,
+      "aria-labelledby": labelId.current,
     },
-    labelProps: { role: "label" },
+    labelProps: { id: labelId.current },
     errorProps: { role: "alert" },
   }
 }
