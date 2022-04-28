@@ -77,5 +77,8 @@
   },
   "msw": {
     "workerDirectory": "public"
+  },
+  "dependencies": {
+    "@storybook/addon-a11y": "^6.4.22"
   }
 }
