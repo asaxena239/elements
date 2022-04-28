@@ -12,11 +12,18 @@ type BaseAvatarProps = {
   sx?: SXObject
   bg?: string
   small?: boolean
+  name?: string
+  email?: string
 }
 
 type AvatarProps = BaseAvatarProps &
   ({ initials: string; photo?: never } | { initials?: never; photo: string })
 
+/**
+ * Avatar
+ *
+ * Component to display info about a user.
+ */
 export const Avatar = forwardRef<
   HTMLDivElement,
   PropsWithChildren<AvatarProps>
@@ -26,6 +33,8 @@ export const Avatar = forwardRef<
     bg = "uiSubtle",
     initials,
     photo,
+    name,
+    email,
     children,
     small = false,
     ...props
@@ -36,11 +45,12 @@ export const Avatar = forwardRef<
   const avatarRef = useRef(null)
   useLayoutEffect(() => {
     if (avatarRef.current) {
-      setMulti((prev) => {
-        return avatarRef.current.getBoundingClientRect().height > 54
-      })
+      setMulti(avatarRef.current.getBoundingClientRect().height > 54)
     }
   }, [!!avatarRef.current])
+  if ((name || email) && children) {
+    console.warn("Shouldn't have name or email, and children on an avatar.")
+  }
   return (
     <Box
       {...props}
@@ -78,7 +88,7 @@ export const Avatar = forwardRef<
           />
         )}
       </Box>
-      {children && !!small && (
+      {children && !small && (
         <Box sx={{ ml: "0.5rem", mr: "2rem", my: "1rem" }}>{children}</Box>
       )}
     </Box>

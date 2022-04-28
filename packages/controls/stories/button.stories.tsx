@@ -5,7 +5,7 @@ export default {
   title: "Packages/Controls/Button",
 }
 
-export function ButtonStory() {
+export function StandardButton() {
   return (
     <Stack>
       <Button>Standard</Button>
@@ -22,4 +22,6 @@ export function ButtonStory() {
   )
 }
 
-ButtonStory.storyName = "Button"
+export function SplitButton() {
+  return <Button>Thing thing</Button>
+}

@@ -26,7 +26,7 @@ export function AvatarExample() {
 
 export function AvatarWithLabelExample() {
   return (
-    <Avatar photo={defaultPhoto} bg="blue_100">
+    <Avatar photo={defaultPhoto} bg="blue_100" name="patrick">
       patrick@dreadful.design
     </Avatar>
   )
