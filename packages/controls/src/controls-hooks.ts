@@ -5,14 +5,12 @@ import {
   useContext,
   useEffect,
   HTMLProps,
-  PropsWithRef,
   ForwardedRef,
   KeyboardEvent,
 } from "react"
 import { noop, wrapEvent, mergeRefs, getId } from "@doors/utils"
 import { SelectContext, SelectActions } from "./select/select-provider"
-import { useResize } from "@doors/hooks"
-import { SelectItemProps } from "./select/select-item"
+import { useResize, useId } from "@doors/hooks"
 
 export function useTextControl({
   type = "text",
@@ -25,26 +23,26 @@ export function useTextControl({
   id,
   ...props
 }: any) {
+  const labelId = useId()
   const isDate = type === "date"
   const [raised, setRaised] = useState(!!value || !!defaultValue || isDate)
   function handleChange({ target }: ChangeEvent<HTMLInputElement>) {
     setRaised(!!target.value.length || isDate)
   }
-  const labelId = useRef(getId())
   return {
     raised,
     label,
     error,
     help,
     labelProps: {
-      id: labelId.current,
+      id: labelId,
     },
     textFieldProps: {
       ...props,
       id,
       type,
       value,
-      "aria-labelledby": labelId.current,
+      "aria-labelledby": labelId,
       onChange: wrapEvent(onChange, handleChange),
     },
     errorProps: {
@@ -74,7 +72,7 @@ export function useDiscreteControl({
   type = "checkbox",
   ...props
 }: DiscreteControlProps) {
-  const labelId = useRef(getId())
+  const labelId = useId()
   const [checked, set] = useState<boolean>(defaultChecked)
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     set(event.target.checked)
@@ -99,86 +97,86 @@ export function useDiscreteControl({
       checked,
       onChange: wrapEvent(onChange, handleChange),
       hidden: true,
-      "aria-labelledby": labelId.current,
+      "aria-labelledby": labelId,
     },
-    labelProps: { id: labelId.current },
+    labelProps: { id: labelId },
     errorProps: { role: "alert" },
   }
 }
 
-export function useCheckbox({
-  type = "checkbox",
-  label,
-  ref,
-  error,
-  defaultChecked = false,
-  checked: externalChecked,
-  onChange,
-  ...props
-}: any) {
-  const [checked, setChecked] = useState(defaultChecked)
-  function handleChange(evt: ChangeEvent<HTMLInputElement>) {
-    setChecked(evt.target.checked)
-  }
-  function handleKeyDown({ key }) {
-    console.log(key)
-    if (key === "Enter" || key === " ") setChecked((prev) => !prev)
-  }
-  return {
-    checked,
-    label,
-    wrapperProps: { tabIndex: 0, onKeyDown: handleKeyDown },
-    inputProps: {
-      ...props,
-      key: `${checked}-${props.id}`,
-      ref,
-      type,
-      hidden: true,
-      checked,
-      onChange: wrapEvent(onChange, handleChange),
-    },
-    error,
-    errorHtmlProps: { role: "alert" },
-  }
-}
+// export function useCheckbox({
+//   type = "checkbox",
+//   label,
+//   ref,
+//   error,
+//   defaultChecked = false,
+//   checked: externalChecked,
+//   onChange,
+//   ...props
+// }: any) {
+//   const [checked, setChecked] = useState(defaultChecked)
+//   function handleChange(evt: ChangeEvent<HTMLInputElement>) {
+//     setChecked(evt.target.checked)
+//   }
+//   function handleKeyDown({ key }) {
+//     console.log(key)
+//     if (key === "Enter" || key === " ") setChecked((prev) => !prev)
+//   }
+//   return {
+//     checked,
+//     label,
+//     wrapperProps: { tabIndex: 0, onKeyDown: handleKeyDown },
+//     inputProps: {
+//       ...props,
+//       key: `${checked}-${props.id}`,
+//       ref,
+//       type,
+//       hidden: true,
+//       checked,
+//       onChange: wrapEvent(onChange, handleChange),
+//     },
+//     error,
+//     errorHtmlProps: { role: "alert" },
+//   }
+// }
 
-export function useSwitch({
-  checked: externalChecked,
-  defaultChecked = false,
-  ref,
-  onChange,
-  onKeyDown,
-  id,
-  ...props
-}: any) {
-  const [checked, set] = useState(defaultChecked)
-  function handleChange(evt) {
-    set((prevChanged) => !prevChanged)
-  }
-  function handleKeyDown({ keyCode }) {
-    if (keyCode === 32) set((prevChanged) => !prevChanged)
-  }
-  useEffect(() => {
-    if (externalChecked != null) set(externalChecked)
-  }, [externalChecked])
-  return {
-    checked,
-    wrapperProps: {
-      role: "switch",
-      tabIndex: 0,
-      id,
-      onKeyDown: wrapEvent(onKeyDown, handleKeyDown),
-    },
-    inputProps: {
-      ...props,
-      ref,
-      type: "checkbox",
-      hidden: true,
-      checked,
-      onChange: wrapEvent(onChange, handleChange),
-    },
-  }
-}
+// export function useSwitch({
+//   checked: externalChecked,
+//   defaultChecked = false,
+//   ref,
+//   onChange,
+//   onKeyDown,
+//   id,
+//   ...props
+// }: any) {
+//   const [checked, set] = useState(defaultChecked)
+//   function handleChange(evt) {
+//     set((prevChanged) => !prevChanged)
+//   }
+//   function handleKeyDown({ keyCode }) {
+//     if (keyCode === 32) set((prevChanged) => !prevChanged)
+//   }
+//   useEffect(() => {
+//     if (externalChecked != null) set(externalChecked)
+//   }, [externalChecked])
+//   return {
+//     checked,
+//     wrapperProps: {
+//       role: "switch",
+//       tabIndex: 0,
+//       id,
+//       onKeyDown: wrapEvent(onKeyDown, handleKeyDown),
+//     },
+//     inputProps: {
+//       ...props,
+//       ref,
+//       type: "checkbox",
+//       hidden: true,
+//       checked,
+//       onChange: wrapEvent(onChange, handleChange),
+//     },
+//   }
+// }
 
 export function useSlider({
   value,
@@ -246,6 +244,8 @@ export function useSelectInput({
     },
     textFieldProps: {
       ...props,
+      role: "combobox",
+      "aria-expanded": state.open,
       ref: textFieldRef,
       value: state.searchValue,
       onChange: wrapEvent(onChange, handleChange),

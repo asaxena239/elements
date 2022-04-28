@@ -2089,6 +2089,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@doors/hooks@workspace:packages/hooks"
   dependencies:
+    "@doors/utils": "workspace:^"
     microbundle: ^0.14.2
   peerDependencies:
     react: "*"

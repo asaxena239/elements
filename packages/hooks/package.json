@@ -35,5 +35,8 @@
   },
   "devDependencies": {
     "microbundle": "^0.14.2"
+  },
+  "dependencies": {
+    "@doors/utils": "workspace:^"
   }
 }
