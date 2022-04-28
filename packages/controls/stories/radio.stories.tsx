@@ -1,4 +1,5 @@
 import { FormEvent } from "react"
+import { Box, Flex } from "@doors/core"
 import { RadioButton, RadioGroup } from "../src"
 
 export default {
@@ -13,8 +14,18 @@ export function ControlledRadioButton() {
         console.log(target.value)
       }}
     >
-      <RadioButton id="id-1" name="thing" value="one" />
-      <RadioButton id="id-2" name="thing" value="two" label="Labeled radio" />
+      <Flex sx={{ gap: "2rem" }}>
+        <Box as="label" htmlFor="sauce-1">
+          Mayo
+        </Box>
+        <RadioButton id="sauce-1" name="sauce-preference" value="mayo" />
+      </Flex>
+      <Flex sx={{ gap: "2rem" }}>
+        <Box as="label" htmlFor="sauce-2">
+          Mustard
+        </Box>
+        <RadioButton id="sauce-2" name="sauce-preference" value="mustard" />
+      </Flex>
     </RadioGroup>
   )
 }

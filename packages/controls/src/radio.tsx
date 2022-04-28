@@ -1,7 +1,8 @@
 import styled from "styled-components"
-import { forwardRef, HTMLProps } from "react"
-import { SXObject, Box, sx } from "@doors/core"
+import { forwardRef, HTMLProps, useRef } from "react"
 import css from "@styled-system/css"
+import { SXObject, Box, sx } from "@doors/core"
+// import { mergeRefs } from "@doors/utils"
 
 interface RadioButtonProps extends HTMLProps<HTMLInputElement> {
   label?: string
@@ -20,7 +21,6 @@ export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
   function RadioButton({ sx = {}, label, ...props }, ref) {
     return (
       <Box
-        as="label"
         sx={{
           position: "relative",
           display: "inline-flex",
