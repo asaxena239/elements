@@ -43,6 +43,6 @@
     "framer-motion": "4.1.17"
   },
   "devDependencies": {
-    "microbundle": "^0.14.2"
+    "microbundle": "^0.15.0"
   }
 }

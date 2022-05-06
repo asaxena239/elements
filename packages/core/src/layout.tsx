@@ -1,7 +1,7 @@
 /// <reference types="styled-system__css" />
 
 import styled from "styled-components"
-import css, { SystemStyleObject, SystemCssProperties } from "@styled-system/css"
+import css, { SystemStyleObject } from "@styled-system/css"
 import {
   space,
   layout,

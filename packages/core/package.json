@@ -38,9 +38,9 @@
     "@styled-system/css": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
     "deepmerge": "^4.2.2",
-    "styled-system": "*"
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "microbundle": "^0.14.2"
+    "microbundle": "^0.15.0"
   }
 }

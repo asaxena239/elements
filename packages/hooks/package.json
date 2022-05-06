@@ -34,7 +34,7 @@
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
-    "microbundle": "^0.14.2"
+    "microbundle": "^0.15.0"
   },
   "dependencies": {
     "@doors/utils": "workspace:^"

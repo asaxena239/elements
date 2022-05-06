@@ -22,8 +22,8 @@
     "prepack": "yarn build"
   },
   "devDependencies": {
-    "microbundle": "^0.14.2",
-    "react": "^18.0.0"
+    "microbundle": "^0.15.0",
+    "react": "^18.1.0"
   },
   "publishConfig": {
     "access": "public"
