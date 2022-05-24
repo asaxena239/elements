@@ -1,4 +1,4 @@
-import { renderHook, act } from "@doors/testing"
+import { renderHook, act } from "testing"
 import { useResize } from "../src"
 
 describe("useResize", () => {
