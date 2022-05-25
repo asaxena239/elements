@@ -1,5 +1,5 @@
 {
-  "name": "doors-design",
+  "name": "doors",
   "private": true,
   "description": "Design system for Avail",
   "scripts": {
@@ -10,11 +10,9 @@
     "create-package": "ts-node ./scripts/create-package",
     "release": "yarn workspaces foreach --parallel --no-private npm publish --tolerate-republish",
     "release:storybook": "chromatic",
-    "start": "concurrently \"yarn:start:*\"",
     "start:docs": "yarn workspace @doors/docs run dev",
-    "start:packages": "yarn workspaces foreach -p -i -v -j unlimited --exclude @doors/docs run watch",
-    "start:storybook": "start-storybook --port 4000 --quiet",
-    "dev": "concurrently -n packages,storybook \"yarn start:packages\" \"yarn start:storybook\"",
+    "start:dev": "yarn workspaces foreach -p -i -v -j unlimited --exclude @doors/docs run watch",
+    "watch": "start-storybook --port 4000 --quiet",
     "test": "jest",
     "core": "yarn workspace @doors/core",
     "controls": "yarn workspace @doors/controls",
@@ -36,10 +34,10 @@
     "@babel/core": "^7.17.10",
     "@babel/preset-typescript": "^7.16.7",
     "@changesets/cli": "^2.22.0",
-    "@storybook/addon-actions": "^6.4.22",
-    "@storybook/addon-essentials": "^6.4.22",
-    "@storybook/addon-links": "^6.4.22",
-    "@storybook/react": "^6.4.22",
+    "@storybook/addon-actions": "^6.5.5",
+    "@storybook/addon-essentials": "^6.5.5",
+    "@storybook/addon-links": "^6.5.5",
+    "@storybook/react": "^6.5.5",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/react-hooks": "^8.0.0",
@@ -52,7 +50,6 @@
     "@types/styled-system": "^5.1.15",
     "@types/styled-system__css": "^5.0.16",
     "chromatic": "^6.5.4",
-    "concurrently": "^7.1.0",
     "jest": "^28.0.3",
     "jest-environment-jsdom": "^28.1.0",
     "microbundle": "^0.15.0",
@@ -79,6 +76,6 @@
     "workerDirectory": "public"
   },
   "dependencies": {
-    "@storybook/addon-a11y": "^6.4.22"
+    "@storybook/addon-a11y": "^6.5.5"
   }
 }
