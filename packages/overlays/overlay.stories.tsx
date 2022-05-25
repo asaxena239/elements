@@ -205,7 +205,3 @@ export function PopoverExample() {
 }
 
 PopoverExample.storyName = "Popover"
-
-export function TooltipExample() {}
-
-TooltipExample.storyName = "Tooltip"

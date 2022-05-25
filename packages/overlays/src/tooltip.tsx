@@ -1,76 +1,80 @@
 import {
-  cloneElement,
-  createContext,
-  RefObject,
-  useCallback,
-  useContext,
+  forwardRef,
+  HTMLProps,
+  MutableRefObject,
   useLayoutEffect,
-  useState,
+  useReducer,
 } from "react"
+import { SXObject } from "@doors/core"
+import { AnimatePresence, motion } from "framer-motion"
 import { Popover } from "./popover"
 
-export function Tooltip({
-  targetRef,
-  defaultOpen = false,
-  id,
-  sx = {},
-  ...props
-}) {
-  const [open, setOpen] = useState(defaultOpen)
-  return (
-    open && (
-      <Popover
-        {...props}
-        role="tooltip"
-        aria-describedby={id}
-        targetRef={targetRef}
-        sx={sx}
-      />
+function tooltipReducer(
+  state: { open: boolean },
+  action: { type: string; payload?: any }
+) {
+  switch (action.type) {
+    case "OPEN":
+      return { ...state, open: true }
+    case "CLOSE":
+      return { ...state, open: false }
+    default:
+      throw Error("unknown action")
+  }
+}
+interface TooltipProps extends HTMLProps<"div"> {
+  targetRef: MutableRefObject<HTMLElement>
+  sx?: SXObject
+}
+
+export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
+  function Tooltip({ children, targetRef, sx }, ref) {
+    const [{ open }, dispatch] = useReducer(tooltipReducer, { open: false })
+    useLayoutEffect(() => {
+      function handleEnter(e) {
+        dispatch({ type: "OPEN" })
+      }
+      function handleExit(e) {
+        dispatch({ type: "CLOSE" })
+      }
+      const enterEvents = ["focus", "mouseenter"]
+      const exitEvents = ["blur", "mouseleave"]
+      if (targetRef.current) {
+        enterEvents.forEach((evt) => {
+          targetRef.current.addEventListener(evt, handleEnter, false)
+        })
+        exitEvents.forEach((evt) => {
+          targetRef.current.addEventListener(evt, handleExit, false)
+        })
+      }
+      return () => {
+        if (targetRef.current) {
+          enterEvents.forEach((evt) => {
+            targetRef.current.removeEventListener(evt, handleEnter, false)
+          })
+          exitEvents.forEach((evt) => {
+            targetRef.current.removeEventListener(evt, handleExit, false)
+          })
+        }
+      }
+    }, [targetRef.current])
+    return (
+      <AnimatePresence>
+        {open && (
+          <Popover
+            // @ts-ignore
+            as={motion.div}
+            targetRef={targetRef}
+            ref={ref}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            sx={{ p: 1, bg: "ui", ...sx }}
+          >
+            {children}
+          </Popover>
+        )}
+      </AnimatePresence>
     )
-  )
-}
-
-type MapValue = { target: RefObject<HTMLElement>; open: boolean }
-
-const TooltipsContext =
-  createContext<{ state: Map<string, MapValue>; registerTooltip: Function }>(
-    null
-  )
-
-export function TooltipsProvider() {
-  const [state, set] = useState(new Map<string, MapValue>())
-  const registerTooltip = useCallback((key: string, value: MapValue) => {
-    set(new Map(state.set(key, value)))
-  }, [])
-  return <TooltipsContext.Provider value={{ state, registerTooltip }} />
-}
-
-export function useTooltips() {
-  const ctx = useContext(TooltipsContext)
-  if (!ctx) throw Error("Must use tooltips hook within a tooltips provider.")
-  return ctx
-}
-
-export function TooltipTarget({ id, defaultOpen, children }) {
-  const { state, registerTooltip } = useTooltips()
-  useLayoutEffect(() => {
-    registerTooltip(id, defaultOpen)
-  }, [id])
-  return cloneElement(children, { role: "button" })
-}
-
-export function TooltipContent({ id, sx = {}, ...props }) {
-  const { state } = useTooltips()
-  const { target, open } = state.get(id)
-  return (
-    open && (
-      <Popover
-        {...props}
-        role="tooltip"
-        aria-describedby={id}
-        targetRef={target}
-        sx={sx}
-      />
-    )
-  )
-}
+  }
+)
