@@ -15,12 +15,16 @@ interface RadioButtonProps extends HTMLProps<HTMLInputElement> {
  *
  * Radio buttons should be always be used in a group of two or more and should be the
  * default over select inputs for choices of less than 5.
+ * 
+ * @example
+ * <RadioButton name="condiment" value="mustard" />
  */
 
 export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
   function RadioButton({ sx = {}, label, ...props }, ref) {
     return (
       <Box
+        as="label"
         sx={{
           position: "relative",
           display: "inline-flex",
