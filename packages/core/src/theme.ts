@@ -109,6 +109,7 @@ export const baseTheme = {
     monospace: "'IBM Plex Mono', monospace",
   },
   fontSizes: {
+    legal: "1rem",
     small: "1.334rem",
     body: "1.5rem",
     subtitle: "2rem",
@@ -165,6 +166,10 @@ export const baseTheme = {
       fontWeight: "black",
       textTransform: "uppercase",
     },
+    legal: {
+      fontSize: "legal",
+      lineHeight: "2",
+    }
   },
   buttonRadius: "0.25rem",
   containerWidth: "86rem",
