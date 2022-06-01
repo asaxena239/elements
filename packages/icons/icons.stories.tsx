@@ -18,7 +18,7 @@ export function IconsStory() {
             }}
           >
             <Box as={icon} />
-            <Box sx={{ text: "small", mt: "0.5rem", color: "ui_700" }}>
+            <Box sx={{ text: "small", mt: 1, color: "ui_700", wordBreak: "break-word", textAlign: "center"}}>
               {name}
             </Box>
           </Col>
