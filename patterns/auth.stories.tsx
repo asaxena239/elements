@@ -42,7 +42,7 @@ export function AuthPage() {
               name="password"
               autoComplete="new-password"
             />
-            <Button>Create account</Button>
+            <Button type="button">Create account</Button>
           </Stack>
         </Stack>
       </Stack>
