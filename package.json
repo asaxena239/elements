@@ -3,7 +3,7 @@
   "private": true,
   "description": "Design system for Avail",
   "scripts": {
-    "build:packages": "yarn workspaces foreach -piv -j unlimited --exclude @doors/docs run build",
+    "build:packages": "yarn workspaces foreach -pivt -j unlimited --exclude @doors/docs run build",
     "build:storybook": "build-storybook",
     "build:docs": "yarn run -w @doors/docs build",
     "clean": "yarn workspaces foreach -piv run rimraf node_modules",
@@ -11,7 +11,7 @@
     "release": "yarn workspaces foreach --parallel --no-private npm publish --tolerate-republish",
     "release:storybook": "chromatic",
     "start:docs": "yarn workspace @doors/docs run dev",
-    "start:dev": "yarn workspaces foreach -p -i -v -j unlimited --exclude @doors/docs run watch",
+    "start:dev": "yarn workspaces foreach -piv -j unlimited --exclude @doors/docs run watch",
     "watch": "start-storybook --port 4000 --quiet",
     "test": "jest",
     "core": "yarn workspace @doors/core",
@@ -34,10 +34,10 @@
     "@babel/core": "^7.17.10",
     "@babel/preset-typescript": "^7.16.7",
     "@changesets/cli": "^2.22.0",
-    "@storybook/addon-actions": "^6.5.5",
-    "@storybook/addon-essentials": "^6.5.5",
-    "@storybook/addon-links": "^6.5.5",
-    "@storybook/react": "^6.5.5",
+    "@storybook/addon-actions": "^6.5.6",
+    "@storybook/addon-essentials": "^6.5.6",
+    "@storybook/addon-links": "^6.5.6",
+    "@storybook/react": "^6.5.6",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/react-hooks": "^8.0.0",
@@ -76,6 +76,6 @@
     "workerDirectory": "public"
   },
   "dependencies": {
-    "@storybook/addon-a11y": "^6.5.5"
+    "@storybook/addon-a11y": "^6.5.6"
   }
 }
