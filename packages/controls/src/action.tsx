@@ -15,8 +15,8 @@ function useAction({ onKeyDown, ...props }: any) {
   return {
     wrapperProps: {
       ...props,
-      role: "button",
-      tabIndex: 0,
+      as: "button",
+      type: "button",
       onKeyDown: wrapEvent(onKeyDown, handleKeyDown),
     },
     iconProps: {
@@ -24,6 +24,13 @@ function useAction({ onKeyDown, ...props }: any) {
     },
   }
 }
+
+/**
+ * Action: a user interactive element with a contextual icon.
+ * 
+ * @example
+ * <Action icon={Palette}>Change Color Scheme</Action>
+ */
 
 export function Action({
   icon,
@@ -36,11 +43,11 @@ export function Action({
     <Box
       {...wrapperProps}
       sx={{
+        all: "unset",
         display: "inline-flex",
         gap: "0.5rem",
-        color: "avail.actionPrimary",
-        cursor: "pointer",
-        "&:hover": { color: "avail.actionSecondary" },
+        color: "action",
+        "&:hover": { color: "actionSecondary" },
         ...sx,
       }}
     >
