@@ -51,7 +51,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             width: "2rem",
           }}
         >
-          <polyline points="20 6 9 17 4 12"></polyline>
+          <polyline points="20 6 9 17 4 12" />
         </Box>
         {label && (
           <Box {...labelProps} as="span" sx={{ text: "body" }}>
