@@ -1,0 +1,14 @@
+{
+  "name": "@doors/figma",
+  "private": true,
+  "scripts": {
+    "dev:server": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "nodemon": "2.0.16",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.47.0"
+  }
+}

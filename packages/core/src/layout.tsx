@@ -11,11 +11,7 @@ import {
   LayoutProps,
   compose,
 } from "styled-system"
-import { HTMLProps, PropsWithChildren } from "react"
 
-// export interface SXObject extends SystemCssProperties {
-//   text?: string | string[]
-// }
 export type SXObject = SystemStyleObject & { text?: string | string[] }
 
 export const sx = ({ sx = {} }: { sx?: SXObject }) => {

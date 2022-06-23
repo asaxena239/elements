@@ -1,23 +1,54 @@
 import { Fragment } from "react"
 import { Box, Container, Col, Grid, Card, Stack } from "../src"
 
-export default { title: "Packages/Core" }
+export default {
+  title: "Packages/Core/Layout",
+  subcomponents: { Box, Container, Col, Grid, Card, Stack },
+}
+
+export function Layout() {
+  return (
+    <Container>
+      <Grid>
+        <Col>
+          <Box sx={{ p: 2, bg: "brand", color: "textInverted" }}>Header</Box>
+        </Col>
+        <Col as={Grid}>
+          <Col span={[12, 8]} sx={{ bg: "ui", p: 2 }}>
+            Main
+          </Col>
+          <Col span={[12, 4]} sx={{ bg: "brandSecondarySubtle", p: 2 }}>
+            Sidebar
+          </Col>
+        </Col>
+        <Col sx={{ bg: "uiSecondary", p: 2 }}>Footer</Col>
+      </Grid>
+    </Container>
+  )
+}
 
 export function BoxExample() {
   return <Box sx={{ bg: "ui_300", p: "2rem" }}>Box</Box>
 }
 
+BoxExample.storyName = "Box"
+
 export function ContainerExample() {
   return (
     <Container>
-      <Box sx={{ p: "2rem", bg: "blue_100" }}>Container</Box>
-      <h1>Hello Hero Font</h1>
+      <Box sx={{ p: "2rem", bg: "blue_100" }}>
+        Containers will center within it's parent and keep content inside a max
+        width.
+      </Box>
     </Container>
   )
 }
 
+ContainerExample.storyName = "Container"
+
+const columnStyles = { p: "2rem", bg: "green_100" }
+
 export function GridExample() {
-  const columnStyles = { p: "2rem", bg: "green_100" }
   return (
     <Grid>
       <Col span="1" sx={columnStyles}>
@@ -42,9 +73,13 @@ export function GridExample() {
   )
 }
 
+GridExample.storyName = "Grid"
+
 export function CardExample() {
   return <Card>I'm a card.</Card>
 }
+
+CardExample.storyName = "Card"
 
 export function StackExample() {
   const itemStyles = {
@@ -66,3 +101,5 @@ export function StackExample() {
     </Fragment>
   )
 }
+
+StackExample.storyName = "Stack"

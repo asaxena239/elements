@@ -20,7 +20,7 @@ export function useTheme(customTheme: CustomTheme = {}) {
       ...customTheme.colors,
       ...colorModes[config.colorMode],
     }
-    return merge(baseTheme, customTheme)
+    return merge(baseTheme, customTheme, { arrayMerge: (x, y) => y })
   }, [customTheme])
   return memoizedTheme
 }

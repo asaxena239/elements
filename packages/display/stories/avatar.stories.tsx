@@ -1,10 +1,9 @@
 import { Box } from "@doors/core"
-import { Fragment } from "react"
 import { Avatar, AvatarGroup } from "../src/avatar"
 // import { AvatarsProvider } from "./src/avatars-provider"
 
 export default {
-  title: "Packages/Display/Avatars",
+  title: "Packages/Display/Avatar",
 }
 
 const defaultPhoto =

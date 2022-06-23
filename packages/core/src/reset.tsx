@@ -101,7 +101,7 @@ export const Reset = createGlobalStyle`
     font-size: ${themeGet("fontSizes.body")};
     font-weight: ${themeGet("fontWeights.regular")};
     line-height: ${themeGet("lineHeights.body")};
-    color: ${themeGet("colors.textPrimary")};
+    color: ${themeGet("colors.text")};
   }
 
   h1 {

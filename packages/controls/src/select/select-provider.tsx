@@ -10,24 +10,6 @@ interface SelectProps {
   sx?: SXObject
 }
 
-/**
- * Select: Input that let's the user choose from a list of pre-defined values.
- *
- * Selects should be used to help a user choose from a list of 5 or more values. The
- * component shows the currently select value an allows the user to open a menu to change
- * their selection. Select components can be optionally searchable. To view helpful
- * examples to go https://design.avail.co/elements/controls#select
- *
- * @example
- *
- * <Select>
- *   <SelectInput label="State" />
- *   <SelectList>
- *     <SelectItem value="IL" label="Illinois" >Illinois</SelectItem>
- *   </SelectList>
- * </Select>
- */
-
 export const SelectContext = createContext(null)
 
 export enum SelectActions {
@@ -72,6 +54,24 @@ function selectReducer(state: SelectState, action: SelectAction) {
       throw Error("Unknown action: " + action.type)
   }
 }
+
+/**
+ * Select: Input that let's the user choose from a list of pre-defined values.
+ *
+ * Selects should be used to help a user choose from a list of 5 or more values. The
+ * component shows the currently select value an allows the user to open a menu to change
+ * their selection. Select components can be optionally searchable. To view helpful
+ * examples to go https://design.avail.co/elements/controls#select
+ *
+ * @example
+ *
+ * <Select>
+ *   <SelectInput label="State" />
+ *   <SelectList>
+ *     <SelectItem value="IL" label="Illinois" >Illinois</SelectItem>
+ *   </SelectList>
+ * </Select>
+ */
 
 export function Select({
   children,
