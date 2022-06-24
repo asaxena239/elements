@@ -1,14 +1,33 @@
 {
   "name": "@doors/figma",
   "private": true,
-  "scripts": {
-    "dev:server": "nodemon src/server.js"
-  },
   "dependencies": {
-    "nodemon": "2.0.16",
-    "xml2js": "^0.4.23"
+    "@create-figma-plugin/ui": "^2.1.0",
+    "@create-figma-plugin/utilities": "^2.1.0",
+    "preact": "^10",
+    "prismjs": "^1.28.0",
+    "react-simple-code-editor": "^0.11.2"
   },
   "devDependencies": {
-    "@figma/plugin-typings": "^1.47.0"
+    "@create-figma-plugin/build": "^2.1.0",
+    "@create-figma-plugin/tsconfig": "^2.1.0",
+    "@figma/plugin-typings": "1.47.0",
+    "@types/prismjs": "^1.26.0",
+    "@types/react": "^18",
+    "react": "^18",
+    "typescript": "^4"
+  },
+  "scripts": {
+    "build": "build-figma-plugin --typecheck --minify",
+    "watch": "build-figma-plugin --typecheck --watch"
+  },
+  "figma-plugin": {
+    "editorType": [
+      "figma"
+    ],
+    "id": "react-editor",
+    "name": "React Editor",
+    "main": "src/main.ts",
+    "ui": "src/ui.tsx"
   }
 }
