@@ -19,6 +19,7 @@
     "display": "yarn workspace @doors/display",
     "feedback": "yarn workspace @doors/feedback",
     "figma": "yarn workspace @doors/figma",
+    "functions": "yarn workspace @doors/functions",
     "hooks": "yarn workspace @doors/hooks",
     "icons": "yarn workspace @doors/icons",
     "overlays": "yarn workspace @doors/overlays",
@@ -28,7 +29,8 @@
   "license": "ISC",
   "workspaces": [
     "packages/*",
-    "docs"
+    "docs",
+    "functions"
   ],
   "devDependencies": {
     "@babel/cli": "^7.17.10",
